@@ -32,11 +32,15 @@ int main(int argc, char* argv[]){
 	//pega a tela
 	Glib::RefPtr<Gdk::Screen>  screen = b->get_screen();
 
+
 	//setando a gravidade das janelas
 	o->move(0, 0);
 	b->move(screen->get_width() - b->get_width(), screen->get_height() - b->get_height());
 
-	//linkando o sinal
+	//apresentando um portal à outro;
+	o->set_another(b);
+	b->set_another(o);
+	
 	o->show();
 
 	app->run(*b);
