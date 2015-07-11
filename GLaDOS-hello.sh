@@ -5,9 +5,10 @@ portal(){
 }
 
 #sleep 10
-aplay sounds/GLaDOS_00_part1_entry-1.wav sounds/GLaDOS_00_part1_entry-7.wav
+aplay sounds/GLaDOS_00_part1_entry-1.wav sounds/GLaDOS_00_part1_entry-7.wav &> /dev/null
 
-p=$(portal)
+#p=$(portal)
 
-#gnome-terminal --tab -e "/bin/bash -c 'cd ~ ; figlet $p; sleep 0.5 ; clear ;  exec /bin/bash -i'"
-
+cd portals
+./portal
+#gnome-terminal --tab -e "/bin/bash -c 'cd portals/ ./portal;  exec /bin/bash -i'"

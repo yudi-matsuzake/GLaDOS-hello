@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd ~/prog/Shell/portal_opening
-./GLaDOS-hello.sh
